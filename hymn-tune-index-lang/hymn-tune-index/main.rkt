@@ -42,7 +42,7 @@
     [pattern (:scale-degree ...)])
 
   (define-syntax-class hymn-number
-    [pattern :exact-positive-integer])
+    [pattern :number])
 
   (define-syntax-class hymn-info
     #:attributes [hymnal number scale-degrees [scale-degrees.n 1]]
