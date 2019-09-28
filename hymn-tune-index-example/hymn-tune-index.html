@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+    <title>Hynm Tunes</title>
+    <style>
+      body {
+        color: LightSlateGrey;
+      }
+      th {
+        text-align: left;
+      }
+      input[type=text], input[type=search], input[type=number], textarea {
+        max-width: 100%;
+        width: 100%;
+      }
+      input[type=button] {
+        display: block;
+        margin: 1em 0;
+        max-width: 100%;
+        height: 2em; width: 100%;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div>
+      <p>
+        Search for a hymn tune by scale degrees.
+        <br>
+        <small>
+          Examples: For the tune of "Ode to Joy",
+          type in "3 3 4 5 5 4 3 2", or for the
+          tune of "Joy to the World", type in
+          "1 7 6 5 4 3 2 1".
+        </small>
+      </p>
+      <input id="hymntuneinput"
+             type="search"
+             inputmode="numeric"
+             x-inputmode="numeric"
+             pattern: "[0-9 b#]*"
+             name="hymntune"
+             onkeydown="onkey_hymntune()">
+      <input type="button"
+             onclick="onclick_hymntune()"
+             value="Search">
+    </div>
+    <div id="hymntuneresults">
+        Search Results:
+        <table id="hymntunetable">
+          <tr> <th>Book</th> <th>Num</th> <th>Tune</th> </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="hymn-tune-index.js" defer></script>
+  </body>
+</html>

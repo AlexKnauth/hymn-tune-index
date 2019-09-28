@@ -4,3 +4,9 @@ doc/
 
 # Editor-generated files
 *~
+
+# Specific program-generated files
+hymn-tune-index-example/hymn-tune-index.json
+hymn-tune-index-example/hymn-tune-index.js
+hymn-tune-index-example/hymn-tunes.html
+hymn-tune-index-example/link.txt
