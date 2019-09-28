@@ -33,6 +33,11 @@ function push_all(arr, elems) {
     return arr;
 }
 
+function mod(x, n) {
+    let r = x % n;
+    return r < 0 ? r + n : r;
+}
+
 function parse_scale_degree(str) {
     if (str.length === 0) {
         return 0;
@@ -41,8 +46,10 @@ function parse_scale_degree(str) {
     } else if (str[0] === 'b') {
         return parse_scale_degree(str.slice(1)) - 1;
     } else {
+        let i = parseInt(str);
+        if (!Number.isInteger(i)) { return 0; }
         let major = [0,2,4,5,7,9,11];
-        return major[(parseInt(str) - 1) % 12];
+        return major[mod(i - 1, 7)];
     }
 }
 
